@@ -16,9 +16,9 @@
     * DC motor (L298N)
     * Servo motor
 * 04 - ADC
-    * Analog output of infrared sensor
+    * Read analog output of infrared sensor
     * Potentiometer
-    * Use ADC output to control LED and servo
+    * Use ADC to control LED and servo
 * 05 - UART
     * ESP32-PC, ESP32-ESP32
     * Use struct to pack and unpack data
