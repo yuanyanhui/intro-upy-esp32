@@ -219,7 +219,7 @@ class MPU6050:
         bx = 0.0
         by = 0.0
         bz = 0.0
-        print("Calibration started... Do not move sensor!")
+        print("Calibration starts... Do not move sensor!")
         for i in range(N):
             gx, gy, gz = self.get_gyro()
             bx += gx

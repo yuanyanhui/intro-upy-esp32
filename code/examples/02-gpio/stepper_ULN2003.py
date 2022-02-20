@@ -12,8 +12,8 @@ IN3 = Pin(5,  Pin.OUT)
 IN4 = Pin(18, Pin.OUT)
 
 # half-step mode
-# counter clockwise step sequence
-seq_ccw = [[1, 0, 0, 0],
+# clockwise step sequence
+seq_cw = [[1, 0, 0, 0],
           [1, 1, 0, 0],
           [0, 1, 0, 0],
           [0, 1, 1, 0],
@@ -22,8 +22,8 @@ seq_ccw = [[1, 0, 0, 0],
           [0, 0, 0, 1],
           [1, 0, 0, 1]]
 
-# clockwise step sequence
-seq_cw = seq_ccw[::-1]
+# counterclockwise step sequence
+seq_ccw = seq_cw[::-1]
 
 delay = 1  # ms, delay between steps
 
