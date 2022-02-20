@@ -22,7 +22,7 @@ seq_ccw = [[1, 0, 0, 0],
            [0, 0, 0, 1],
            [1, 0, 0, 1]]
 
-# counterclockwise step sequence
+# clockwise step sequence
 seq_cw = seq_ccw[::-1]
 
 delay = 1  # ms, delay between steps
