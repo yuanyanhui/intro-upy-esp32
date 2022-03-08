@@ -9,10 +9,12 @@ from led_web_page import web_page
 
 # LED on NODEMCU-32S
 led = Pin(2, Pin.OUT)
+led.value(0)
+led_state = "OFF"
  
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind(('', 80))
-s.listen(5)
+s.listen(1) # >1 causes request pending
 
 while True:
   # stops at “conn, addr = s.accept()” waiting for request
@@ -23,15 +25,13 @@ while True:
   print('Content = %s' % request)
   led_on = request.find('/led_on')
   led_off = request.find('/led_off')
-  if led_on == 6:
+  if 'GET /led_on' in request:
     print('LED ON')
     led.value(1)
-  if led_off == 6:
+    led_state = "ON"
+  elif 'GET /led_off' in request:
     print('LED OFF')
     led.value(0)
-  if led.value() == 1:
-    led_state = "ON"
-  else:
     led_state = "OFF"
   response = web_page(led_state)
   conn.send('HTTP/1.1 200 OK\n')
