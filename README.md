@@ -23,11 +23,13 @@
     * ESP32-PC, ESP32-ESP32
     * Use struct to pack and unpack data
     * Send and receive data with markers
+	* Plot real-time serial data using matplotlib
 * 06 - I2C
     * Temperature sensor (tmp102)
     * Inertial sensor (mpu6050)
 * 07 - WIFI
-    * Read ESP32 temperature and up time from browser
+    * Socket communication between ESP32 and PC
+	* Read ESP32 temperature and up time from browser
     * Toggle ESP32 on-board LED from browser 
 * 08 - BLE
     * Toggle ESP32 on-board LED using bluetooth low energy (BLE)
