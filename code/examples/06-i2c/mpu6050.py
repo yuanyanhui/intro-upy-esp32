@@ -2,7 +2,7 @@
 MPU6050 code adapted from:
 https://github.com/m-rtijn/mpu6050
 
-Compelementary filter code adapted from:
+Complementary filter code adapted from:
 https://github.com/pms67/Attitude-Estimation
 
 The reset value is 0x00 for all registers other than the registers below.

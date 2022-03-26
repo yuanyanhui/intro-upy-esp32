@@ -62,12 +62,12 @@ def animate(i):
             line1.set_data(x1_data, y1_data)
             line2.set_data(x2_data, y2_data)
                       
-            ax.set_xlim(max(0, i-2000), max(2000, i)) #added ax attribute here
+            ax.set_xlim(max(0, i-500), max(500, i)) #added ax attribute here
 
     return (line1, line2)
 
 # Create the animation threads that will update the plots at our specified interval. 
-ani = animation.FuncAnimation(fig, animate, interval = INTERVAL_UPDATE_MS, init_func = init, blit = True)
+ani = animation.FuncAnimation(fig, animate, interval = INTERVAL_UPDATE_MS, init_func = init)
 plt.show()
 
 
