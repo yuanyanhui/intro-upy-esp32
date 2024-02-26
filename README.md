@@ -30,6 +30,7 @@
 * 07 - WIFI
     * Socket communication between ESP32 and PC
 	* Read ESP32 temperature and up time from browser
-    * Toggle ESP32 on-board LED from browser 
+    * Toggle ESP32 on-board LED from browser
+    * Pin control using hcsr04 and microdot web server
 * 08 - BLE
     * Toggle ESP32 on-board LED using bluetooth low energy (BLE)
