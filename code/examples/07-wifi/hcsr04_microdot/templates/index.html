@@ -1,0 +1,49 @@
+{% args mode, state %}
+<!doctype html>
+<html>
+    <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+
+    <title>Smart Light</title>
+  </head>
+  <body>
+    <header class="py-5 d-flex align-items-center justify-content-center">
+        <div class="container">
+            <h1 class="display-4 text-center">Smart Light</h1>
+            <hr class="border border-dark w-50 mx-auto">
+        </div>
+    </header>
+ 
+    <div class="container d-flex justify-content-center">
+        <form method="POST" action="/">
+            <div class="container d-flex py-5 gap-5 justify-content-center">
+                {% if mode=='auto' %}
+                <span class="d-flex gap-2 align-items-center"><i class="bi bi-gear" style="font-size: 2rem; color: cornflowerblue;"></i><button type="submit" class="btn btn-primary" id="modeButton" name="mode" value="manual">AUTO</button></span>
+                    {% if state=='on' %}
+                    <span class="d-flex gap-2 align-items-center"><i class="bi bi-lightbulb" style="font-size: 2rem; color: cornflowerblue;"></i><button type="submit" class="btn btn-success" id="ledButton" name="state" value="off" disabled>ON</button></span>
+                    {% else %}
+                    <span class="d-flex gap-2 align-items-center"><i class="bi bi-lightbulb" style="font-size: 2rem; color: cornflowerblue;"></i><button type="submit" class="btn btn-danger" id="ledButton" name="state" value="on" disabled>OFF</button></span>
+                    {% endif %}
+                {% else %}
+                <span class="d-flex gap-2 align-items-center"><i class="bi bi-gear" style="font-size: 2rem; color: cornflowerblue;"></i><button type="submit" class="btn btn-warning" id="modeButton" name="mode" value="auto">MANUAL</button></span>
+                    {% if state=='on' %}
+                    <span class="d-flex gap-2 align-items-center"><i class="bi bi-lightbulb" style="font-size: 2rem; color: cornflowerblue;"></i><button type="submit" class="btn btn-success" id="ledButton" name="state" value="off">ON</button></span>
+                    {% else %}
+                    <span class="d-flex gap-2 align-items-center"><i class="bi bi-lightbulb" style="font-size: 2rem; color: cornflowerblue;"></i><button type="submit" class="btn btn-danger" id="ledButton" name="state" value="on">OFF</button></span>
+                    {% endif %}
+                {% endif %}
+            </div>
+        </form>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

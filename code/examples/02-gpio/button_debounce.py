@@ -1,3 +1,8 @@
+"""
+Wait for change of pin state.
+True change lasts for a continuous 20ms.
+"""
+
 # https://docs.micropython.org/en/latest/pyboard/tutorial/debounce.html
 
 import machine, time

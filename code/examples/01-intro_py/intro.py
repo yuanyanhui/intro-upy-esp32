@@ -25,9 +25,9 @@ Python Tutorial
 
 
 # ---------------- Hello World ----------------
-print("Hello World!")
-name = input("What's your name? ")
-print("Hello ", name)
+# print("Hello World!")
+# name = input("What's your name? ")
+# print("Hello ", name)
 
 
 # ---------------- Python as caculator ----------------
@@ -105,7 +105,7 @@ print("Hello ", name)
     
 # ---------------- logical operators ----------------
 # and, or, not
-# is_hot = False
+# is_hot = True
 # is_cold = False
 # if not is_hot and not is_cold:
 #     print("beautiful day")
@@ -115,8 +115,8 @@ print("Hello ", name)
 
     
 # ---------------- list ----------------
-# empty_list = []    # empty list
-# numbers = [1, 2, 3, 4, 5]
+empty_list = []    # empty list
+numbers = [1, 2, 3, 4, 5]
 # numbers[0]         # first item
 # numbers[1]         # second item
 # numbers[-1]        # first item from the end
@@ -151,7 +151,7 @@ print("Hello ", name)
 # "age": 20,
 # "is_registered": True
 # }
-
+# 
 # student["name"]            # "John Smith"
 # student.get("name")        # "John Smith"
 # student["name"] = "Steve Jobs"
@@ -212,24 +212,24 @@ print("Hello ", name)
 # Functions of a class are called methods.
 # A class is a blueprint, an object is an instance of a class.
 
-# class Point:
-#  def __init__(self, x, y):  # a special method called constructor.
-#      self.x = x
-#      self.y = y
-#  def get_coord(self):       
-#      return self.x, self.y
-#  def set_coord(self, x, y):
-#      self.x = x
-#      self.y = y
-#  def distance(self, point):
-#      return ((self.x - point.x)**2 + (self.y - point.y)**2)**0.5   
+class Point:
+ def __init__(self, x, y):  # a special method called constructor.
+     self.x = x
+     self.y = y
+ def get_coord(self):       
+     return self.x, self.y
+ def set_coord(self, x, y):
+     self.x = x
+     self.y = y
+ def distance(self, point):
+     return ((self.x - point.x)**2 + (self.y - point.y)**2)**0.5   
     
-# p1 = Point(0, 0)  # An object is an instance of a class.
-# p2 = Point(1, 1)
-# print(p1.get_coord())
-# p2.set_coord(3, 4)
-# print(p2.get_coord())
-# print("Distance between p1 and p2 is: ", p1.distance(p2))
+p1 = Point(0, 0)  # An object is an instance of a class.
+p2 = Point(1, 1)
+print(p1.get_coord())
+p2.set_coord(3, 4)
+print(p2.get_coord())
+print("Distance between p1 and p2 is: ", p1.distance(p2))
 
 # Class inheritance
 # class Person:

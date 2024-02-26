@@ -13,25 +13,25 @@ esp.osdebug(None)   # no debug info print
 gc.collect()        # garbage collector
 
 # connect to wifi (station mode)
-station = network.WLAN(network.STA_IF)
-station.active(True)
-station.connect("your-ssid", "your-password")
-while station.isconnected() == False:
-  pass
-
-print('Connection successful')
-print(station.ifconfig())
+# station = network.WLAN(network.STA_IF)
+# station.active(True)
+# station.connect("your-ssid", "your-password")
+# while station.isconnected() == False:
+#   pass
+# 
+# print('Connection successful')
+# print(station.ifconfig())
 
 # Access Point Mode
 # ssid = 'ESP32-AP'
 # password = '123456789'
-
+# 
 # ap = network.WLAN(network.AP_IF)
 # ap.config(essid=ssid, password=password)
 # ap.config(authmode=3)
 # ap.active(True)
 # while not ap.active():
-    # pass
+#     pass
 # print('network config:', ap.ifconfig())
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

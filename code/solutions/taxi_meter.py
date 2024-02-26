@@ -13,6 +13,7 @@ def taxi_meter(dist):
             total += 2
         elif d % 5 != 0:
             total += 1
+
     return total
 
 
